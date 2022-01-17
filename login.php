@@ -86,7 +86,7 @@ if (isset($_POST['submit'])) {
         <form action="" method="post">
             <div>
                 <label for="email">E-mailadres</label>
-                <input id="email" type="text" name="email" value="<?= $email ?? '' ?>"/>
+                <input id="email" type="email" name="email" value="<?= $email ?? '' ?>"/>
                 <span class="errors"><?= $errors['email'] ?? '' ?></span>
             </div>
             <div>
