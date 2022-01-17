@@ -9,7 +9,7 @@ if (!isset($_SESSION['loggedInUser'])) {
 
 //email uit sessie halen
 $email = $_SESSION['loggedInUser']['email'];
-if ($email != 'justlukeeee@gmail.com') {
+if ($email != 'admin') {
     header("Location: ../login.php");
     exit;
 }
