@@ -71,7 +71,7 @@ if (isset($_POST['submit'])) {
     <div class="bigZoom"><a href="about.php">Over ons</a></div>
     <div class="bigZoom"><a href="login.php">Login</a></div>
 </nav>
-<header><h1>Inloggen</h1></header>
+<header><h1>Inlog</h1></header>
 <body style="text-align:center">
 <section>
     <?php if ($login) { ?>
