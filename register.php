@@ -1,5 +1,5 @@
 <?php
-
+//connectie maken met database
 if(isset($_POST['submit'])) {
     require_once "DB/database.php";
 
@@ -16,6 +16,7 @@ if(isset($_POST['submit'])) {
         $errors['password'] = 'Voer een wachtwoord in';
     }
 
+    //password hashen
     if(empty($errors)) {
         $password = password_hash($password, PASSWORD_DEFAULT);
 
