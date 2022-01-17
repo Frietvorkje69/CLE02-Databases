@@ -1,0 +1,87 @@
+<?php
+session_start();
+
+//admin check
+if (!isset($_SESSION['loggedInUser'])) {
+    header("Location: ../login.php");
+    exit;
+}
+
+//email uit sessie halen
+$email = $_SESSION['loggedInUser']['email'];
+if ($email != 'justlukeeee@gmail.com') {
+    header("Location: ../login.php");
+    exit;
+}
+
+//database connectie openen
+/** @var $db */
+require_once "database.php";
+
+//als er geen id is gegeven terug naar index
+if (!isset($_GET['id']) || $_GET['id'] === '') {
+    header('Location: index.php');
+    exit;
+}
+
+//id ophalen en opslaan
+$userId = $_GET['id'];
+
+//info ophalen uit database
+$query = "SELECT * FROM reservations WHERE id = " . $userId;
+$result = mysqli_query($db, $query);
+
+//als het album niet bestaat terug sturen naar index
+if (mysqli_num_rows($result) == 0) {
+    header('Location: index.php');
+    exit;
+}
+
+//info opslaan in array
+$user = mysqli_fetch_assoc($result);
+
+//connectie sluiten
+mysqli_close($db);
+?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link
+            rel="icon"
+            href="https://cdn.glitch.me/dd3e24be-0f5e-4407-ac88-7e0d7057b1ff%2Ficonadmin.png?v=1638789158835"
+    />
+    <title>Details | <?= $user['name'] ?></title>
+    <link rel="stylesheet" href="../style2.css">
+    <script src="https://kit.fontawesome.com/c7b1d33b1c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Mansalva&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<section>
+    <h3>#<?= $user['id'] ?> <?= $user['name']; ?> - Details</h3>
+    <ul>
+        <li>E-Mail:
+            <?= $user['email']; ?>
+        </li>
+        <li>Telefoonnummer:
+            <?= $user['phone']; ?>
+        </li>
+        <li>Adres:
+            <?= $user['adress']; ?> - <?= $user['zip']; ?>
+        </li>
+        <li>Info:
+            <?= $user['info']; ?>
+        </li>
+    </ul>
+
+</section>
+<div>
+    <section><a href="index.php">Go back to the index</a></section>
+</div>
+</body>
+</html>
