@@ -55,7 +55,7 @@ if(isset($_POST['submit'])) {
 <form action="" method="post">
     <div class="data-field">
         <label for="email">Emailadres</label>
-        <input id="email" type="text" name="email" value="<?= $email ?? '' ?>"/>
+        <input id="email" type="email" name="email" value="<?= $email ?? '' ?>"/>
         <span class="errors"><?= $errors['email'] ?? '' ?></span>
     </div>
     <div class="data-field">
