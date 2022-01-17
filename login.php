@@ -36,7 +36,6 @@ if (isset($_POST['submit'])) {
                 $_SESSION['loggedInUser'] = [
                     'email' => $user['email'],
                     'id' => $user['id'],
-                    'admin' => $user['admin']
                 ];
             } else {
                 //error onjuiste inloggegevens
