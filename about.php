@@ -18,7 +18,7 @@
     <div class="bigZoom"><a href="index.html">Home</a></div>
     <div class="bigZoom"><a href="reservation.php">Reserveren</a></div>
     <div class="bigZoom"><a href="about.php">Over ons</a></div>
-    <div class="bigZoom"><a href="login.php">Log in</a></div>
+    <div class="bigZoom"><a href="login.php">Login</a></div>
 </nav>
 <header><h1>Over ons</h1></header>
 <body>
