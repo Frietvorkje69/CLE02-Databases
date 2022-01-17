@@ -75,7 +75,7 @@ if (isset($_POST['submit'])) {
 <body style="text-align:center">
 <section>
     <?php if ($login) { ?>
-        <p>Je bent ingelogd!</p>
+        <p><h3>Je bent ingelogd!</h3></p>
         <p><a href="logout.php">Uitloggen</a> / <a href="DB/index.php">Naar home page</a></p>
         <img class="imagegallery"
              src="https://cdn130.picsart.com/265836587009211.png"
