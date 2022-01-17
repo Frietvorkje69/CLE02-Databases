@@ -107,7 +107,7 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="data-field">
             <label for="info">Info</label>
-            <input id="info" type="text" name="info" placeholder="Ik wil graag dat je oppast op mijn twee katten."
+            <input id="info" type="text" name="info" placeholder="Datum en tijd + info over betreffende dieren"
                    value="<?= isset($info) ? htmlentities($info) : '' ?>"/>
             <span class="errors"><?= isset($errors['info']) ? $errors['info'] : '' ?></span>
         </div>
