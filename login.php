@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
             rel="icon"
             href="https://cdn.glitch.me/dd3e24be-0f5e-4407-ac88-7e0d7057b1ff%2Ficon.png?v=1638789020824"
     />
-    <title>DVV | Contact</title>
+    <title>DVV | Login</title>
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <script src="https://kit.fontawesome.com/c7b1d33b1c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
