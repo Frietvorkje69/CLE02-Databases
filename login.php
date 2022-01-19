@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
     <div class="bigZoom"><a href="about.php">Over ons</a></div>
     <div class="bigZoom"><a href="login.php">Login</a></div>
 </nav>
-<header><h1>Inlog</h1></header>
+<header><h1>Login</h1></header>
 <body style="text-align:center">
 <section>
     <?php if ($login) { ?>
@@ -85,7 +85,7 @@ if (isset($_POST['submit'])) {
         <form action="" method="post">
             <div>
                 <label for="email">E-mailadres</label>
-                <input id="email" type="email" name="email" value="<?= $email ?? '' ?>"/>
+                <input id="email" type="text" name="email" value="<?= $email ?? '' ?>"/>
                 <span class="errors"><?= $errors['email'] ?? '' ?></span>
             </div>
             <div>
@@ -102,6 +102,15 @@ if (isset($_POST['submit'])) {
     <?php } ?>
 
 </section>
+<footer>
+    <p>Contact:</p>
+    <h2>
+        <div class="bigZoom"><a href="https://www.instagram.com/lukerd_dg/"><i class="fab fa-instagram"></i></a></div>
+    </h2>
+    <h2>
+        <div class="bigZoom"><a href="https://github.com/Frietvorkje69"><i class="fab fa-github"></i></a></div>
+    </h2>
 
+</footer>
 </body>
 </html>
