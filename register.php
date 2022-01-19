@@ -54,7 +54,7 @@ if(isset($_POST['submit'])) {
 <h3>Nieuwe gebruiker registeren</h3>
 <form action="" method="post">
     <div class="data-field">
-        <label for="email">Emailadres</label>
+        <label for="email">E-mailadres</label>
         <input id="email" type="email" name="email" value="<?= $email ?? '' ?>"/>
         <span class="errors"><?= $errors['email'] ?? '' ?></span>
     </div>
