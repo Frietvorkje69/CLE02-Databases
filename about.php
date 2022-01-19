@@ -33,12 +33,11 @@
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum.
         <br>
-        <fig>
-            <img
-                    src="https://cdn.glitch.com/dd3e24be-0f5e-4407-ac88-7e0d7057b1ff%2FLUKEE.jpg?v=1633339356007"
-            />
-    <figcaption>Afbeelding 1: Onze trotse CEO; Luke de Groot</figcaption>
-    </fig>
+            <fig>
+                <img class="center"
+                        src="https://i.imgur.com/pLIeN9k.png"
+                />
+            </fig>
     </p>
 </section>
 </body>
