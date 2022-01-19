@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-//admin check
+//algemene check
 if (!isset($_SESSION['loggedInUser'])) {
     header("Location: ../login.php");
     exit;
 }
 
-//email uit sessie halen
+//admin check
 $email = $_SESSION['loggedInUser']['email'];
 if ($email != 'admin') {
     header("Location: ../login.php");
