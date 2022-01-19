@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
             href="https://cdn.glitch.me/dd3e24be-0f5e-4407-ac88-7e0d7057b1ff%2Ficonadmin.png?v=1638789158835"
     />
     <title>Edit | <?= $userId ?></title>
-    <link rel="stylesheet" href="../style2.css?v=<?= time(); ?>">
+    <link rel="stylesheet" href="../admin.css?v=<?= time(); ?>">
     <script src="https://kit.fontawesome.com/c7b1d33b1c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
