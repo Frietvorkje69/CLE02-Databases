@@ -26,7 +26,7 @@ if (!isset ($_GET['id']) || $_GET['id'] === "") {
 //id opslaan in var
 $userId = mysqli_escape_string($db, $_GET['id']);
 
-//query haalt info op uit tabel
+//query DELETE info uit tabel
 $query = "DELETE FROM reservations WHERE id = '$userId'";
 
 //uitvoeren delete
