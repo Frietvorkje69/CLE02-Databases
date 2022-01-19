@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-//admin check
+//login check algemeen
 if (!isset($_SESSION['loggedInUser'])) {
     header("Location: ../login.php");
     exit;
 }
 
-//email uit sessie halen
+//admin check
 $email = $_SESSION['loggedInUser']['email'];
 if ($email != 'admin') {
     header("Location: ../login.php");
@@ -28,7 +28,7 @@ if (!isset($_GET['id']) || $_GET['id'] === '') {
 $userId = $_GET['id'];
 
 //info ophalen uit database
-$query = "SELECT * FROM reservations WHERE id = " . $userId;
+$query = "SELECT * FROM reservations WHERE id = '$userId'";
 $result = mysqli_query($db, $query);
 
 //als het album niet bestaat terug sturen naar index
