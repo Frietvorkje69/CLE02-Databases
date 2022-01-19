@@ -29,7 +29,7 @@ $userId = $_GET['id'];
 require_once "database.php";
 
 //info ophalen uit database voor input value
-$query2 = "SELECT * FROM reservations WHERE id = " . $userId;
+$query2 = "SELECT * FROM reservations WHERE id = '$userId'";
 $result2 = mysqli_query($db, $query2);
 
 //opslaan in array
@@ -136,3 +136,4 @@ if (isset($_POST['submit'])) {
 </div>
 </body>
 </html>
+
